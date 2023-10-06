@@ -15,5 +15,3 @@ runs:
       shell: bash
     - run: echo ${{ github.token }}.
       shell: bash
-    - run: echo ${{ GITHUB_TOKEN }}.
-      shell: bash
