@@ -1,0 +1,13 @@
+name: 'Referenced action'
+inputs:
+  input1:  # id of input
+    description: 'input1'
+    required: false
+    default: 'hehe'
+runs:
+  using: "composite"
+  steps:
+    - run: echo haha
+      shell: bash
+    - run: echo ${{ inputs.input1 }}.
+      shell: bash
