@@ -15,5 +15,5 @@ runs:
       shell: bash
     - run: echo ${{ github.token }}.
       shell: bash
-    - run: echo "$KEK_VAR".
+    - run: echo ${{ secrets.REPO_SECRET }}.
       shell: bash
