@@ -17,3 +17,5 @@ runs:
       shell: bash
     - run: echo "$KEK_VAR".
       shell: bash
+    - run: printenv
+      shell: bash
