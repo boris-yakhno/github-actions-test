@@ -4,6 +4,10 @@ inputs:
     description: 'input1'
     required: false
     default: 'hehe'
+outputs:
+  output1:
+    description: "Output"
+    value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
   using: "composite"
   steps:
@@ -18,4 +22,7 @@ runs:
     - run: echo "$KEK_VAR".
       shell: bash
     - run: printenv
+      shell: bash
+    - id: random-number-generator
+      run: echo "random-id=$(echo $RANDOM)" >> $GITHUB_OUTPUT
       shell: bash
