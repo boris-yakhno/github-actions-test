@@ -15,6 +15,8 @@ runs:
       shell: bash
     - run: echo ${{ inputs.input1 }}.
       shell: bash
+    - run: echo ${{ env.INPUT_input1 }}.
+      shell: bash
     - run: echo ${{ github.actor }}.
       shell: bash
     - run: echo ${{ github.token }}.
